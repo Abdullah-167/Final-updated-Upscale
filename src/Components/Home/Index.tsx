@@ -412,13 +412,10 @@ const Hero = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 className={`mb-4 p-3 rounded-lg ${submitStatus.type === "success"
-<<<<<<< HEAD
                   ? "bg-green-50 border border-green-200 text-green-800"
                   : "bg-red-50 border border-red-200 text-red-800"
-=======
                     ? "bg-green-50 border border-green-200 text-green-800"
                     : "bg-red-50 border border-red-200 text-red-800"
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
                   }`}
                 role="alert"
                 aria-live="polite"
@@ -443,13 +440,10 @@ const Hero = () => {
                     }}
                     placeholder="yoursite.com"
                     className={`w-full pl-9 sm:pl-10 pr-3 py-2.5 sm:py-3 bg-white/80 text-gray-900 outline-none border ${errors.website
-<<<<<<< HEAD
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-[#1570EF]"
-=======
                         ? "border-red-500 focus:border-red-500"
                         : "border-gray-300 focus:border-[#1570EF]"
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
                       } rounded-lg transition-colors placeholder-gray-500 ${TYPOGRAPHY.bodySmall}`}
                     disabled={isSubmitting}
                     aria-invalid={!!errors.website}
@@ -476,13 +470,10 @@ const Hero = () => {
                     }}
                     placeholder="your@email.com"
                     className={`w-full pl-9 sm:pl-10 pr-3 py-2.5 sm:py-3 bg-white/80 text-gray-900 outline-none border ${errors.email
-<<<<<<< HEAD
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-[#1570EF]"
-=======
                         ? "border-red-500 focus:border-red-500"
                         : "border-gray-300 focus:border-[#1570EF]"
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
                       } rounded-lg transition-colors placeholder-gray-500 ${TYPOGRAPHY.bodySmall}`}
                     disabled={isSubmitting}
                     aria-invalid={!!errors.email}
@@ -1106,15 +1097,12 @@ const workData: WorkItem[] = [
   { id: "1", title: "Data Wizz", description: "Designing the new branding, website, pitch deck and marketing collateral for a $12.5M seed AI platform", image: "/projects/web/datawizz/DATAWIZZ.avif", video: "/projects/web/datawizz/DATAWIZZ_CASE_STUDY_web.mp4", caseStudyUrl: "/projects/product-development/datawizz", tags: ["Branding", "Web Design", "AI"], category: "Web Design & Branding" },
   { id: "2", title: "N3XT.io", description: "Designed the brand and digital experience for a $72M-funded next-gen narrow bank platform.", image: "/projects/web/n3xt/n3xtcard.avif", video: "/projects/web/n3xt/N3XT_CASESTUDY_web.mp4", caseStudyUrl: "/projects/product-development/n3xt", tags: ["Web Design", "E-Commerce"], category: "Web Design & Dev" },
   { id: "3", title: "Spatial", description: "Brand refresh and a new website presence for a spatial computing and 3D collaboration platform.", image: "/projects/web/spatial/Spatial.avif", video: "/projects/web/spatial/Spatial_web.mp4", caseStudyUrl: "/projects/product-development/spatial", tags: ["Link Building", "SEO"], category: "Link Building" },
-<<<<<<< HEAD
   { id: "4", title: "Droxy", description: "Strategic content ecosystem that generated 12,000+ qualified leads in 12 months.", image: "/projects/web/droxy/droxy.webp", video: "/projects/web/droxy/droxy_CASESTUDY_web.mp4", caseStudyUrl: "/projects/product-development/droxy", tags: ["Content Writing", "Strategy"], category: "Content Marketing" },
   { id: "5", title: "Zave.it", description: "Designing the brand, site and product for an AI operating layer that helps real estate investment firms scale AUM.", image: "/projects/web/zaveit/zaveit1.avif", video: "/projects/web/zaveit/zaveitweb.mp4", caseStudyUrl: "/projects/product-development/zaveit", tags: ["Social Media", "Branding"], category: "Social Media Marketing" },
   { id: "6", title: "GanAI", description: "Future-proofed AI search optimization that made our client the #1 answer in ChatGPT and Perplexity results.", image: "/projects/web/ganai/genaimain.webp", video: "/projects/web/genai/genaimain.mp4", caseStudyUrl: "/projects/product-development/gan-ai", tags: ["GEO", "AI Search"], category: "GEO & AI" },
-=======
   { id: "4", title: "Droxy", description: "Strategic content ecosystem that generated 12,000+ qualified leads in 12 months.", image: "/projects/web/droxy/droxy.webp", video: "/work/content-demo.mp4", caseStudyUrl: "/projects/product-development/droxy", tags: ["Content Writing", "Strategy"], category: "Content Marketing" },
   { id: "5", title: "Zave.it", description: "Designing the brand, site and product for an AI operating layer that helps real estate investment firms scale AUM.", image: "/projects/web/zaveit/zaveit1.avif", video: "/projects/web/zaveit/zaveitweb.mp4", caseStudyUrl: "/projects/product-development/zaveit", tags: ["Social Media", "Branding"], category: "Social Media Marketing" },
   { id: "6", title: "GanAI", description: "Future-proofed AI search optimization that made our client the #1 answer in ChatGPT and Perplexity results.", image: "/projects/web/genai/genai.webp", video: "/work/geo-demo.mp4", caseStudyUrl: "/projects/product-development/gan-ai", tags: ["GEO", "AI Search"], category: "GEO & AI" },
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
 ];
 
 const WorkCard = ({ item }: { item: WorkItem }) => {
