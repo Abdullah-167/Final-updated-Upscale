@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Play, ArrowUpRight } from "lucide-react";
@@ -41,7 +41,6 @@ const workData: WorkItem[] = [
   },
   {
     id: "3",
-<<<<<<< HEAD
     title: "Droxy",
     description: "Strategic content ecosystem that generated 12,000+ qualified leads in 12 months.",
     image: "/projects/web/droxy/droxy.webp",
@@ -50,10 +49,8 @@ const workData: WorkItem[] = [
     tags: ["Content Writing", "Strategy"],
     category: "Content Marketing",
   },
-    {
+  {
     id: "4",
-=======
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
     title: "Spatial",
     description: "Brand refresh and a new website presence for a spatial computing and 3D collaboration platform.",
     image: "/projects/web/spatial/Spatial.avif",
@@ -63,8 +60,6 @@ const workData: WorkItem[] = [
     category: "Link Building",
   },
   {
-<<<<<<< HEAD
-=======
     id: "4",
     title: "Droxy",
     description: "Strategic content ecosystem that generated 12,000+ qualified leads in 12 months.",
@@ -75,7 +70,6 @@ const workData: WorkItem[] = [
     category: "Content Marketing",
   },
   {
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
     id: "5",
     title: "Zave.it",
     description: "Designing the brand, site and product for an AI operating layer that helps real estate investment firms scale AUM.",
@@ -106,28 +100,25 @@ const WorkCard = ({ item }: { item: WorkItem }) => {
   const [videoDuration, setVideoDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
 
-  // Handle video time update
-  const handleTimeUpdate = () => {
+  const handleTimeUpdate = useCallback(() => {
     const video = videoRef.current;
     if (video && video.duration) {
       setVideoDuration(video.duration);
       setCurrentTime(video.currentTime);
-      // If video reached the end, loop back to start
       if (video.currentTime >= video.duration - 0.1) {
         video.currentTime = 0;
         video.play().catch(() => { });
       }
     }
-  };
+  }, []);
 
-  // Handle video ended event
-  const handleVideoEnded = () => {
+  const handleVideoEnded = useCallback(() => {
     const video = videoRef.current;
     if (video) {
       video.currentTime = 0;
       video.play().catch(() => { });
     }
-  };
+  }, []);
 
   // Handle hover enter - ENTIRE CARD
   const handleMouseEnter = () => {
@@ -162,43 +153,36 @@ const WorkCard = ({ item }: { item: WorkItem }) => {
     }
   };
 
-<<<<<<< HEAD
   // Update the WorkCard component
-  const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+  const handleVideoError = useCallback((e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
     const video = e.currentTarget;
-    console.error(`Video failed to load:`);
+    console.error(`Video failed to load for ${item.title}:`);
     console.error(`  - Path: ${item.video}`);
     console.error(`  - Error: ${video.error?.message || 'Unknown error'}`);
     console.error(`  - Network State: ${video.networkState}`);
     console.error(`  - Ready State: ${video.readyState}`);
     setVideoError(true);
-  };
+  }, [item.video, item.title]);
 
-  // Clean up on unmount
-// In WorkCard component, add this useEffect
-useEffect(() => {
-  const video = videoRef.current;
-  if (video && !videoError) {
-    // Force reload the video
-    video.load();
-    
-    // Log when video is ready
-    const handleCanPlay = () => {
-      console.log('Video can play:', item.video);
-    };
-    
-    video.addEventListener('canplay', handleCanPlay);
-    
-    return () => {
-      video.removeEventListener('canplay', handleCanPlay);
-    };
-  }
-}, [item.video, videoError]);
-=======
-  const handleVideoError = () => {
-    setVideoError(true);
-    console.error(`Video failed to load: ${item.video}`);
-  };
+  // In WorkCard component, add this useEffect
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video && !videoError) {
+      // Force reload the video
+      video.load();
+
+      // Log when video is ready
+      const handleCanPlay = () => {
+        console.log('Video can play:', item.video);
+      };
+
+      video.addEventListener('canplay', handleCanPlay);
+
+      return () => {
+        video.removeEventListener('canplay', handleCanPlay);
+      };
+    }
+  }, [item.video, videoError]);
 
   // Clean up on unmount
   useEffect(() => {
@@ -210,7 +194,6 @@ useEffect(() => {
       }
     };
   }, []);
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
 
   return (
     <motion.div
@@ -248,13 +231,9 @@ useEffect(() => {
               }`}
           >
             {!videoError ? (
-<<<<<<< HEAD
               // In WorkCard component
               <video
                 key={item.video} // Add this key
-=======
-              <video
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
                 ref={videoRef}
                 src={item.video}
                 className="w-full h-full object-cover"
@@ -268,10 +247,7 @@ useEffect(() => {
                 onLoadedMetadata={() => {
                   if (videoRef.current) {
                     setVideoDuration(videoRef.current.duration);
-<<<<<<< HEAD
                     console.log('Video loaded successfully:', item.video);
-=======
->>>>>>> 9ed8837d3db91405f367e1ace42a02532566995d
                   }
                 }}
               />

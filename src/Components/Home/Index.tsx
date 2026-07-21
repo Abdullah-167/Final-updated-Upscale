@@ -414,15 +414,19 @@ const Hero = () => {
                 className={`mb-4 p-3 rounded-lg ${submitStatus.type === "success"
                   ? "bg-green-50 border border-green-200 text-green-800"
                   : "bg-red-50 border border-red-200 text-red-800"
-                    ? "bg-green-50 border border-green-200 text-green-800"
-                    : "bg-red-50 border border-red-200 text-red-800"
                   }`}
                 role="alert"
                 aria-live="polite"
               >
                 <div className="flex items-center gap-2">
-                  {submitStatus.type === "success" ? <CheckCircle className="w-5 h-5" /> : <AlertCircle className="w-5 h-5" />}
-                  <p className={TYPOGRAPHY.bodySmall + " font-medium"}>{submitStatus.message}</p>
+                  {submitStatus.type === "success" ? (
+                    <CheckCircle className="w-5 h-5" />
+                  ) : (
+                    <AlertCircle className="w-5 h-5" />
+                  )}
+                  <p className={TYPOGRAPHY.bodySmall + " font-medium"}>
+                    {submitStatus.message}
+                  </p>
                 </div>
               </motion.div>
             )}
@@ -442,8 +446,6 @@ const Hero = () => {
                     className={`w-full pl-9 sm:pl-10 pr-3 py-2.5 sm:py-3 bg-white/80 text-gray-900 outline-none border ${errors.website
                       ? "border-red-500 focus:border-red-500"
                       : "border-gray-300 focus:border-[#1570EF]"
-                        ? "border-red-500 focus:border-red-500"
-                        : "border-gray-300 focus:border-[#1570EF]"
                       } rounded-lg transition-colors placeholder-gray-500 ${TYPOGRAPHY.bodySmall}`}
                     disabled={isSubmitting}
                     aria-invalid={!!errors.website}
@@ -470,8 +472,6 @@ const Hero = () => {
                     }}
                     placeholder="your@email.com"
                     className={`w-full pl-9 sm:pl-10 pr-3 py-2.5 sm:py-3 bg-white/80 text-gray-900 outline-none border ${errors.email
-                      ? "border-red-500 focus:border-red-500"
-                      : "border-gray-300 focus:border-[#1570EF]"
                         ? "border-red-500 focus:border-red-500"
                         : "border-gray-300 focus:border-[#1570EF]"
                       } rounded-lg transition-colors placeholder-gray-500 ${TYPOGRAPHY.bodySmall}`}
