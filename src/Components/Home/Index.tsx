@@ -859,12 +859,6 @@ const NewServicesSection = () => {
             digital growth
           </h2>
         </div>
-        <Link
-          href="#all-services"
-          className="hidden sm:inline-flex items-center gap-2 font-[family-name:var(--font-body)] text-sm text-gray-700 border border-gray-300 rounded-full px-5 py-3 hover:border-[#1570EF] hover:text-[#1570EF] transition-colors focus-visible:ring-2 focus-visible:ring-[#1570EF] focus-visible:outline-none"
-        >
-          All services <ArrowUpRight className="w-4 h-4" />
-        </Link>
       </div>
 
       <div
