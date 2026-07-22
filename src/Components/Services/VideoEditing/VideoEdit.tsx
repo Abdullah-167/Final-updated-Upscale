@@ -52,6 +52,57 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
+// ---------- CTA SECTION (Same as Homepage) ----------
+const CallToAction = () => {
+    return (
+        <section className="relative overflow-hidden" aria-label="Call to action">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="relative z-10 bg-[#1570EF] mx-auto px-8 py-40"
+            >
+                <div className="flex items-center max-w-[1200px] mx-auto relative flex-wrap lg:flex-nowrap">
+                    <div className="gap-6">
+                        <p className="font-[family-name:var(--font-body)] text-sm md:text-lg pb-7 text-white/80">
+                            You've seen what strategic partnerships can do, so now…
+                        </p>
+                        <h3 className="font-[family-name:var(--font-cabinet)] text-3xl md:text-[96px] font-bold text-white mb-4 max-w-[700px] leading-[85px] pb-5">
+                            Turn Your Vision Into Cinematic Reality
+                        </h3>
+                        <p className="font-[family-name:var(--font-body)] text-white/90 text-lg md:text-xl max-w-2xl">
+                            Book a free consultation and let's discuss how professional video editing can elevate your brand.
+                        </p>
+                    </div>
+                    <div className="mt-[260px] ml-auto">
+                        <Link href={"/partnership-program-contact"}>
+                            <button className="cursor-pointer flex justify-center gap-2 items-center mx-auto shadow-xl text-lg bg-white backdrop-blur-md lg:font-[family-name:var(--font-body)] font-semibold isolation-auto border-white before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full hover:text-[#1570EF] before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-2xl group focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none">
+                                Start Your Content Journey
+                                <svg className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z" className="fill-gray-800 group-hover:fill-[#1570EF]" />
+                                </svg>
+                            </button>
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="absolute -top-18 -right-20 z-10" aria-hidden="true">
+                    <svg viewBox="0 0 100 100" className="h-[28rem] w-[28rem] animate-[spin_15s_linear_infinite] text-blue-500" fill="none">
+                        <g stroke="currentColor" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M30 31 L44 49" /><path d="M61 28 L44 49" /><path d="M44 49 L32 70" />
+                        </g>
+                        <rect x="19" y="20" width="22" height="22" rx="7.5" fill="currentColor" />
+                        <rect x="46" y="13" width="30" height="30" rx="10" fill="currentColor" />
+                        <rect x="33" y="38" width="22" height="22" rx="7.5" fill="currentColor" />
+                        <rect x="21" y="59" width="22" height="22" rx="7.5" fill="currentColor" />
+                    </svg>
+                </div>
+            </motion.div>
+        </section>
+    );
+};
+
 const VideoEditingPage = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMuted, setIsMuted] = useState(true);
@@ -191,473 +242,473 @@ const VideoEditingPage = () => {
         },
     ];
 
-const allProjects = [
-    // ========== MOTION GRAPHICS ==========
-    {
-        id: 1,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/Artisan.mp4",
-    },
-    {
-        id: 2,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/Boxem.mp4",
-    },
-    {
-        id: 3,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/DoksAI.mp4",
-    },
-    {
-        id: 4,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/HappyCompanies.mp4",
-    },
-    {
-        id: 5,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/HarnsTechMarketingVideo.mp4",
-    },
-    {
-        id: 6,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/Infinity.mp4",
-    },
-    {
-        id: 7,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/InstantlyAi.mp4",
-    },
-    {
-        id: 8,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/LangEase2.mp4",
-    },
-    {
-        id: 9,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/NeuraFlow.mp4",
-    },
-    {
-        id: 10,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/Teamble.mp4",
-    },
-    {
-        id: 11,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/Tome.mp4",
-    },
-    {
-        id: 12,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/DATAWIZZ_CASE_STUDY_web.mp4",
-    },
-    {
-        id: 13,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/droxyweb.mp4",
-    },
-    {
-        id: 14,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/LIGHTDASH_web.mp4",
-    },
-    {
-        id: 15,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/n3xtcard.mp4",
-    },
-    {
-        id: 16,
-        category: "motion-graphics",
-        video: "/projects/video-editing/motion-graphics/ViaKonnect_Web.mp4",
-    },
+    const allProjects = [
+        // ========== MOTION GRAPHICS ==========
+        {
+            id: 1,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/Artisan.mp4",
+        },
+        {
+            id: 2,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/Boxem.mp4",
+        },
+        {
+            id: 3,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/DoksAI.mp4",
+        },
+        {
+            id: 4,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/HappyCompanies.mp4",
+        },
+        {
+            id: 5,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/HarnsTechMarketingVideo.mp4",
+        },
+        {
+            id: 6,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/Infinity.mp4",
+        },
+        {
+            id: 7,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/InstantlyAi.mp4",
+        },
+        {
+            id: 8,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/LangEase2.mp4",
+        },
+        {
+            id: 9,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/NeuraFlow.mp4",
+        },
+        {
+            id: 10,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/Teamble.mp4",
+        },
+        {
+            id: 11,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/Tome.mp4",
+        },
+        {
+            id: 12,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/DATAWIZZ_CASE_STUDY_web.mp4",
+        },
+        {
+            id: 13,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/droxyweb.mp4",
+        },
+        {
+            id: 14,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/LIGHTDASH_web.mp4",
+        },
+        {
+            id: 15,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/n3xtcard.mp4",
+        },
+        {
+            id: 16,
+            category: "motion-graphics",
+            video: "/projects/video-editing/motion-graphics/ViaKonnect_Web.mp4",
+        },
 
-    // ========== CORPORATE ==========
-    {
-        id: 17,
-        category: "corporate",
-        video: "/projects/video-editing/corporate/AdelaideAustralia.mp4",
-    },
-    {
-        id: 18,
-        category: "corporate",
-        video: "/projects/video-editing/corporate/ANNOVIREVERBERI.mp4",
-    },
-    {
-        id: 19,
-        category: "corporate",
-        video: "/projects/video-editing/corporate/BDOSingapore.mp4",
-    },
-    {
-        id: 20,
-        category: "corporate",
-        video: "/projects/video-editing/corporate/Bossplast.mp4",
-    },
-    // REMOVED: id: 21 - Bradley.mp4
-    {
-        id: 21, // Previously 22
-        category: "corporate",
-        video: "/projects/video-editing/corporate/CINEMATICFactoryBROLL.mp4",
-    },
-    {
-        id: 22, // Previously 23
-        category: "corporate",
-        video: "/projects/video-editing/corporate/CubesInternational.mp4",
-    },
-    {
-        id: 23, // Previously 24
-        category: "corporate",
-        video: "/projects/video-editing/corporate/DMCC.mp4",
-    },
-    {
-        id: 24, // Previously 25
-        category: "corporate",
-        video: "/projects/video-editing/corporate/Eurofarma.mp4",
-    },
-    {
-        id: 25, // Previously 26
-        category: "corporate",
-        video: "/projects/video-editing/corporate/Gryphon.mp4",
-    },
-    {
-        id: 26, // Previously 27
-        category: "corporate",
-        video: "/projects/video-editing/corporate/HistoriaMezeGrill.mp4",
-    },
-    {
-        id: 27, // Previously 28
-        category: "corporate",
-        video: "/projects/video-editing/corporate/HMM.mp4",
-    },
-    {
-        id: 28, // Previously 29
-        category: "corporate",
-        video: "/projects/video-editing/corporate/Ignace.mp4",
-    },
-    {
-        id: 29, // Previously 30
-        category: "corporate",
-        video: "/projects/video-editing/corporate/IVYRestaurant&Bar.mp4",
-    },
-    {
-        id: 30, // Previously 31
-        category: "corporate",
-        video: "/projects/video-editing/corporate/JoeyMeyer.mp4",
-    },
-    {
-        id: 31, // Previously 32
-        category: "corporate",
-        video: "/projects/video-editing/corporate/NicroS.p.a.45thAnniversary.mp4",
-    },
-    {
-        id: 32, // Previously 33
-        category: "corporate",
-        video: "/projects/video-editing/corporate/SamsungElectronicsRegional.mp4",
-    },
-    {
-        id: 33, // Previously 34
-        category: "corporate",
-        video: "/projects/video-editing/corporate/SimeDarbyBerhadCorporateVideo2023.mp4",
-    },
-    {
-        id: 34, // Previously 35
-        category: "corporate",
-        video: "/projects/video-editing/corporate/ThreeSixtyPropertyGroup.mp4",
-    },
+        // ========== CORPORATE ==========
+        {
+            id: 17,
+            category: "corporate",
+            video: "/projects/video-editing/corporate/AdelaideAustralia.mp4",
+        },
+        {
+            id: 18,
+            category: "corporate",
+            video: "/projects/video-editing/corporate/ANNOVIREVERBERI.mp4",
+        },
+        {
+            id: 19,
+            category: "corporate",
+            video: "/projects/video-editing/corporate/BDOSingapore.mp4",
+        },
+        {
+            id: 20,
+            category: "corporate",
+            video: "/projects/video-editing/corporate/Bossplast.mp4",
+        },
+        // REMOVED: id: 21 - Bradley.mp4
+        {
+            id: 21, // Previously 22
+            category: "corporate",
+            video: "/projects/video-editing/corporate/CINEMATICFactoryBROLL.mp4",
+        },
+        {
+            id: 22, // Previously 23
+            category: "corporate",
+            video: "/projects/video-editing/corporate/CubesInternational.mp4",
+        },
+        {
+            id: 23, // Previously 24
+            category: "corporate",
+            video: "/projects/video-editing/corporate/DMCC.mp4",
+        },
+        {
+            id: 24, // Previously 25
+            category: "corporate",
+            video: "/projects/video-editing/corporate/Eurofarma.mp4",
+        },
+        {
+            id: 25, // Previously 26
+            category: "corporate",
+            video: "/projects/video-editing/corporate/Gryphon.mp4",
+        },
+        {
+            id: 26, // Previously 27
+            category: "corporate",
+            video: "/projects/video-editing/corporate/HistoriaMezeGrill.mp4",
+        },
+        {
+            id: 27, // Previously 28
+            category: "corporate",
+            video: "/projects/video-editing/corporate/HMM.mp4",
+        },
+        {
+            id: 28, // Previously 29
+            category: "corporate",
+            video: "/projects/video-editing/corporate/Ignace.mp4",
+        },
+        {
+            id: 29, // Previously 30
+            category: "corporate",
+            video: "/projects/video-editing/corporate/IVYRestaurant&Bar.mp4",
+        },
+        {
+            id: 30, // Previously 31
+            category: "corporate",
+            video: "/projects/video-editing/corporate/JoeyMeyer.mp4",
+        },
+        {
+            id: 31, // Previously 32
+            category: "corporate",
+            video: "/projects/video-editing/corporate/NicroS.p.a.45thAnniversary.mp4",
+        },
+        {
+            id: 32, // Previously 33
+            category: "corporate",
+            video: "/projects/video-editing/corporate/SamsungElectronicsRegional.mp4",
+        },
+        {
+            id: 33, // Previously 34
+            category: "corporate",
+            video: "/projects/video-editing/corporate/SimeDarbyBerhadCorporateVideo2023.mp4",
+        },
+        {
+            id: 34, // Previously 35
+            category: "corporate",
+            video: "/projects/video-editing/corporate/ThreeSixtyPropertyGroup.mp4",
+        },
 
-    // ========== BRANDS ==========
-    {
-        id: 35, // Previously 36
-        category: "brands",
-        video: "/projects/video-editing/brand/AstraWarrior.mp4",
-    },
-    {
-        id: 36, // Previously 37
-        category: "brands",
-        video: "/projects/video-editing/brand/AttireiumNewLaunch.mp4",
-    },
-    {
-        id: 37, // Previously 38
-        category: "brands",
-        video: "/projects/video-editing/brand/AttireiumShoot2.mp4",
-    },
-    {
-        id: 38, // Previously 39
-        category: "brands",
-        video: "/projects/video-editing/brand/AttireiumShootNew.mp4",
-    },
-    {
-        id: 39, // Previously 40
-        category: "brands",
-        video: "/projects/video-editing/brand/AttireiumShortsShoot.mp4",
-    },
-    {
-        id: 40, // Previously 41
-        category: "brands",
-        video: "/projects/video-editing/brand/Attireium.mp4",
-    },
-    {
-        id: 41, // Previously 42
-        category: "brands",
-        video: "/projects/video-editing/brand/KrossFits.mp4",
-    },
-    {
-        id: 42, // Previously 43
-        category: "brands",
-        video: "/projects/video-editing/brand/NoorScent.mp4",
-    },
-    {
-        id: 43, // Previously 44
-        category: "brands",
-        video: "/projects/video-editing/brand/Oxley.mp4",
-    },
-    {
-        id: 44, // Previously 45
-        category: "brands",
-        video: "/projects/video-editing/brand/Radiance360.mp4",
-    },
-    {
-        id: 45, // Previously 46
-        category: "brands",
-        video: "/projects/video-editing/brand/ReviveScent.mp4",
-    },
-    {
-        id: 46, // Previously 47
-        category: "brands",
-        video: "/projects/video-editing/brand/SpectreBagsVarient2.mp4",
-    },
-    {
-        id: 47, // Previously 48
-        category: "brands",
-        video: "/projects/video-editing/brand/SpectreBags.mp4",
-    },
-    {
-        id: 48, // Previously 49
-        category: "brands",
-        video: "/projects/video-editing/brand/SuitsByScentYou.mp4",
-    },
-    {
-        id: 49, // Previously 50
-        category: "brands",
-        video: "/projects/video-editing/brand/ZimshyVitaminC.mp4",
-    },
+        // ========== BRANDS ==========
+        {
+            id: 35, // Previously 36
+            category: "brands",
+            video: "/projects/video-editing/brand/AstraWarrior.mp4",
+        },
+        {
+            id: 36, // Previously 37
+            category: "brands",
+            video: "/projects/video-editing/brand/AttireiumNewLaunch.mp4",
+        },
+        {
+            id: 37, // Previously 38
+            category: "brands",
+            video: "/projects/video-editing/brand/AttireiumShoot2.mp4",
+        },
+        {
+            id: 38, // Previously 39
+            category: "brands",
+            video: "/projects/video-editing/brand/AttireiumShootNew.mp4",
+        },
+        {
+            id: 39, // Previously 40
+            category: "brands",
+            video: "/projects/video-editing/brand/AttireiumShortsShoot.mp4",
+        },
+        {
+            id: 40, // Previously 41
+            category: "brands",
+            video: "/projects/video-editing/brand/Attireium.mp4",
+        },
+        {
+            id: 41, // Previously 42
+            category: "brands",
+            video: "/projects/video-editing/brand/KrossFits.mp4",
+        },
+        {
+            id: 42, // Previously 43
+            category: "brands",
+            video: "/projects/video-editing/brand/NoorScent.mp4",
+        },
+        {
+            id: 43, // Previously 44
+            category: "brands",
+            video: "/projects/video-editing/brand/Oxley.mp4",
+        },
+        {
+            id: 44, // Previously 45
+            category: "brands",
+            video: "/projects/video-editing/brand/Radiance360.mp4",
+        },
+        {
+            id: 45, // Previously 46
+            category: "brands",
+            video: "/projects/video-editing/brand/ReviveScent.mp4",
+        },
+        {
+            id: 46, // Previously 47
+            category: "brands",
+            video: "/projects/video-editing/brand/SpectreBagsVarient2.mp4",
+        },
+        {
+            id: 47, // Previously 48
+            category: "brands",
+            video: "/projects/video-editing/brand/SpectreBags.mp4",
+        },
+        {
+            id: 48, // Previously 49
+            category: "brands",
+            video: "/projects/video-editing/brand/SuitsByScentYou.mp4",
+        },
+        {
+            id: 49, // Previously 50
+            category: "brands",
+            video: "/projects/video-editing/brand/ZimshyVitaminC.mp4",
+        },
 
-    // ========== REAL ESTATE ==========
-    {
-        id: 50, // Previously 51
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/MRCRES.mp4",
-    },
-    {
-        id: 51, // Previously 52
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/$10,000,000mansion_.mp4",
-    },
-    {
-        id: 52, // Previously 53
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/£11,500,000ThePenthouse.mp4",
-    },
-    {
-        id: 53, // Previously 54
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Areyoureadyforthis.mp4",
-    },
-    {
-        id: 54, // Previously 55
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Colorado.mp4",
-    },
-    {
-        id: 55, // Previously 56
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/DamacIslandsmadehistory.mp4",
-    },
-    {
-        id: 56, // Previously 57
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Didyouknow_.mp4",
-    },
-    {
-        id: 57, // Previously 58
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Dreamingofowningatownhouseorvilla.mp4",
-    },
-    {
-        id: 58, // Previously 59
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/ExperiencelifeatOneatPalmJumeirah.mp4",
-    },
-    {
-        id: 59, // Previously 60
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Fullyupgraded5bedroomvilla.mp4",
-    },
-    {
-        id: 60, // Previously 61
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/HeyJenny!.mp4",
-    },
-    {
-        id: 61, // Previously 62
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Inside$70,000,000MegaMansion_.mp4",
-    },
-    {
-        id: 62, // Previously 63
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Isthistheviralrealestate.mp4",
-    },
-    {
-        id: 63, // Previously 64
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Killerlistingsrequirekilleragents.mp4",
-    },
-    {
-        id: 64, // Previously 65
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/LondonRoadChandler.mp4",
-    },
-    {
-        id: 65, // Previously 66
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/LookingforapenthouseintheCity.mp4",
-    },
-    {
-        id: 66, // Previously 67
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/LookingforapropertyinDubai.mp4",
-    },
-    {
-        id: 67, // Previously 68
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/LuxuryApartmentsforsaleinDubai.mp4",
-    },
-    {
-        id: 68, // Previously 69
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/MikeStudio.mp4",
-    },
-    {
-        id: 69, // Previously 70
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Notjustanotherrealestate_.mp4",
-    },
-    {
-        id: 70, // Previously 71
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/PalmJumeirahBrandNewTurnkeyVilla_.mp4",
-    },
-    {
-        id: 71, // Previously 72
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/PrimeLondonrundown!.mp4",
-    },
-    {
-        id: 72, // Previously 73
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/PropertyTour.mp4",
-    },
-    {
-        id: 73, // Previously 74
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Realestatevideobutmakeitepic.mp4",
-    },
-    {
-        id: 74, // Previously 75
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Sharethispostuntilrealtors_.mp4",
-    },
-    {
-        id: 75, // Previously 76
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/SingledigitreturnsinCanada.mp4",
-    },
-    {
-        id: 76, // Previously 77
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Thishousesatonthemarketformonths.mp4",
-    },
-    {
-        id: 77, // Previously 78
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/THISISWHATYOUCANGET.mp4",
-    },
-    {
-        id: 78, // Previously 79
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/thisproperylocatedinEncino.mp4",
-    },
-    {
-        id: 79, // Previously 80
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Under$14kdonforaDallas_.mp4",
-    },
-    {
-        id: 80, // Previously 81
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Wanttobuypropertyabroad_.mp4",
-    },
-    {
-        id: 81, // Previously 82
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Whereelsecanyouprofitably.mp4",
-    },
-    {
-        id: 82, // Previously 83
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/WhyDubairealestate.mp4",
-    },
-    {
-        id: 83, // Previously 84
-        category: "realestate",
-        video: "/projects/video-editing/real-estate/Zacharietakesusonatour_.mp4",
-    },
+        // ========== REAL ESTATE ==========
+        {
+            id: 50, // Previously 51
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/MRCRES.mp4",
+        },
+        {
+            id: 51, // Previously 52
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/$10,000,000mansion_.mp4",
+        },
+        {
+            id: 52, // Previously 53
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/£11,500,000ThePenthouse.mp4",
+        },
+        {
+            id: 53, // Previously 54
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Areyoureadyforthis.mp4",
+        },
+        {
+            id: 54, // Previously 55
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Colorado.mp4",
+        },
+        {
+            id: 55, // Previously 56
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/DamacIslandsmadehistory.mp4",
+        },
+        {
+            id: 56, // Previously 57
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Didyouknow_.mp4",
+        },
+        {
+            id: 57, // Previously 58
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Dreamingofowningatownhouseorvilla.mp4",
+        },
+        {
+            id: 58, // Previously 59
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/ExperiencelifeatOneatPalmJumeirah.mp4",
+        },
+        {
+            id: 59, // Previously 60
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Fullyupgraded5bedroomvilla.mp4",
+        },
+        {
+            id: 60, // Previously 61
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/HeyJenny!.mp4",
+        },
+        {
+            id: 61, // Previously 62
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Inside$70,000,000MegaMansion_.mp4",
+        },
+        {
+            id: 62, // Previously 63
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Isthistheviralrealestate.mp4",
+        },
+        {
+            id: 63, // Previously 64
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Killerlistingsrequirekilleragents.mp4",
+        },
+        {
+            id: 64, // Previously 65
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/LondonRoadChandler.mp4",
+        },
+        {
+            id: 65, // Previously 66
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/LookingforapenthouseintheCity.mp4",
+        },
+        {
+            id: 66, // Previously 67
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/LookingforapropertyinDubai.mp4",
+        },
+        {
+            id: 67, // Previously 68
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/LuxuryApartmentsforsaleinDubai.mp4",
+        },
+        {
+            id: 68, // Previously 69
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/MikeStudio.mp4",
+        },
+        {
+            id: 69, // Previously 70
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Notjustanotherrealestate_.mp4",
+        },
+        {
+            id: 70, // Previously 71
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/PalmJumeirahBrandNewTurnkeyVilla_.mp4",
+        },
+        {
+            id: 71, // Previously 72
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/PrimeLondonrundown!.mp4",
+        },
+        {
+            id: 72, // Previously 73
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/PropertyTour.mp4",
+        },
+        {
+            id: 73, // Previously 74
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Realestatevideobutmakeitepic.mp4",
+        },
+        {
+            id: 74, // Previously 75
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Sharethispostuntilrealtors_.mp4",
+        },
+        {
+            id: 75, // Previously 76
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/SingledigitreturnsinCanada.mp4",
+        },
+        {
+            id: 76, // Previously 77
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Thishousesatonthemarketformonths.mp4",
+        },
+        {
+            id: 77, // Previously 78
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/THISISWHATYOUCANGET.mp4",
+        },
+        {
+            id: 78, // Previously 79
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/thisproperylocatedinEncino.mp4",
+        },
+        {
+            id: 79, // Previously 80
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Under$14kdonforaDallas_.mp4",
+        },
+        {
+            id: 80, // Previously 81
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Wanttobuypropertyabroad_.mp4",
+        },
+        {
+            id: 81, // Previously 82
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Whereelsecanyouprofitably.mp4",
+        },
+        {
+            id: 82, // Previously 83
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/WhyDubairealestate.mp4",
+        },
+        {
+            id: 83, // Previously 84
+            category: "realestate",
+            video: "/projects/video-editing/real-estate/Zacharietakesusonatour_.mp4",
+        },
 
-    // ========== WEDDING ==========
-    {
-        id: 84, // Previously 85
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/AlfredoAgency.mp4",
-    },
-    {
-        id: 85, // Previously 86
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/AidaxOmidWedding.mp4",
-    },
-    {
-        id: 86, // Previously 87
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/AleynaxAbdullahWedding.mp4",
-    },
-    {
-        id: 87, // Previously 88
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/Aya_sWedding.mp4",
-    },
-    {
-        id: 88, // Previously 89
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/MinalxAhsanWedding.mp4",
-    },
-    {
-        id: 89, // Previously 90
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/PaulxSaraWedding.mp4",
-    },
-    {
-        id: 90, // Previously 91
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/SadiquexRiyaWedding.mp4",
-    },
-    {
-        id: 91, // Previously 92
-        category: "wedding",
-        video: "/projects/video-editing/WeddingEdits/SudexBarisWedding.mp4",
-    },
-];
+        // ========== WEDDING ==========
+        {
+            id: 84, // Previously 85
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/AlfredoAgency.mp4",
+        },
+        {
+            id: 85, // Previously 86
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/AidaxOmidWedding.mp4",
+        },
+        {
+            id: 86, // Previously 87
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/AleynaxAbdullahWedding.mp4",
+        },
+        {
+            id: 87, // Previously 88
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/Aya_sWedding.mp4",
+        },
+        {
+            id: 88, // Previously 89
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/MinalxAhsanWedding.mp4",
+        },
+        {
+            id: 89, // Previously 90
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/PaulxSaraWedding.mp4",
+        },
+        {
+            id: 90, // Previously 91
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/SadiquexRiyaWedding.mp4",
+        },
+        {
+            id: 91, // Previously 92
+            category: "wedding",
+            video: "/projects/video-editing/WeddingEdits/SudexBarisWedding.mp4",
+        },
+    ];
 
     // Shuffle function
     const shuffleArray = (array: typeof allProjects) => {
@@ -826,6 +877,9 @@ const allProjects = [
             answer: "We deliver in all standard formats including MP4, MOV, AVI, and platform-specific formats for YouTube, Instagram, TikTok, LinkedIn, and more.",
         },
     ];
+
+
+
 
     return (
         <div ref={containerRef} className="min-h-screen bg-white overflow-x-hidden">
@@ -1047,8 +1101,8 @@ const allProjects = [
                                     key={filter}
                                     onClick={() => setActiveFilter(filter)}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${activeFilter === filter
-                                            ? "bg-[#1570EF] text-white shadow-lg shadow-[#1570EF]/25"
-                                            : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
+                                        ? "bg-[#1570EF] text-white shadow-lg shadow-[#1570EF]/25"
+                                        : "bg-white text-gray-600 hover:bg-gray-100 border border-gray-200"
                                         }`}
                                 >
                                     {filter === "all"
@@ -1259,8 +1313,8 @@ const allProjects = [
                                     key={p.id}
                                     onClick={() => setSelectedProject(p.id)}
                                     className={`w-2 h-2 rounded-full transition-all ${p.id === selectedProject
-                                            ? "bg-[#1570EF] w-6"
-                                            : "bg-white/30 hover:bg-white/50"
+                                        ? "bg-[#1570EF] w-6"
+                                        : "bg-white/30 hover:bg-white/50"
                                         }`}
                                 />
                             ))}
@@ -1361,8 +1415,8 @@ const allProjects = [
                                 transition={{ delay: idx * 0.1 }}
                                 whileHover={{ y: -10 }}
                                 className={`relative rounded-3xl p-8 border-2 transition-all duration-500 ${tier.popular
-                                        ? "border-[#1570EF] bg-white shadow-2xl shadow-[#1570EF]/10"
-                                        : "border-gray-100 bg-white hover:border-[#1570EF]/30"
+                                    ? "border-[#1570EF] bg-white shadow-2xl shadow-[#1570EF]/10"
+                                    : "border-gray-100 bg-white hover:border-[#1570EF]/30"
                                     }`}
                             >
                                 {tier.popular && (
@@ -1391,8 +1445,8 @@ const allProjects = [
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                         className={`cursor-pointer w-full py-4 rounded-xl font-semibold transition-all ${tier.popular
-                                                ? "bg-[#1570EF] text-white hover:bg-[#0A5BD0] shadow-lg shadow-[#1570EF]/25"
-                                                : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                                            ? "bg-[#1570EF] text-white hover:bg-[#0A5BD0] shadow-lg shadow-[#1570EF]/25"
+                                            : "bg-gray-100 text-gray-800 hover:bg-gray-200"
                                             }`}
                                     >
                                         {tier.cta}
@@ -1507,86 +1561,7 @@ const allProjects = [
                 </div>
             </section>
 
-            {/* ========== CTA ========== */}
-            <section className="relative py-32 px-6 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628] via-[#0F1F3A] to-[#0A1628]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1570EF]/10 via-transparent to-transparent" />
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1570EF] to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#1570EF] to-transparent" />
-
-                <div className="relative max-w-4xl mx-auto text-center z-10">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="space-y-8"
-                    >
-                        <div className="inline-flex items-center gap-3 px-6 py-3 bg-[#1570EF]/20 rounded-full border border-[#1570EF]/30">
-                            <Sparkles className="w-5 h-5 text-[#1570EF]" />
-                            <span className="text-sm font-semibold text-white tracking-wide">READY TO CREATE?</span>
-                        </div>
-
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                            Turn Your Vision Into
-                            <br />
-                            <span className="bg-gradient-to-r from-[#1570EF] to-blue-400 bg-clip-text text-transparent">
-                                Cinematic Reality
-                            </span>
-                        </h2>
-
-                        <p className="text-xl text-white/70 max-w-2xl mx-auto">
-                            Book a free consultation and let's discuss how professional video
-                            editing can elevate your brand.
-                        </p>
-
-                        <div className="flex flex-wrap gap-4 justify-center">
-                            <Link href="/contact-us">
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="cursor-pointer group px-8 py-4 bg-[#1570EF] text-white font-semibold rounded-xl text-lg shadow-2xl shadow-[#1570EF]/30 hover:shadow-[#1570EF]/50 transition-all flex items-center gap-3"
-                                >
-                                    Start Your Project
-                                    <ArrowUpRight className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                                </motion.button>
-                            </Link>
-                            <Link href="#portfolio">
-                                <motion.button
-                                    whileHover={{ scale: 1.05 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="cursor-pointer px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl text-lg hover:bg-white/20 transition-all flex items-center gap-3"
-                                >
-                                    <PlayCircle className="w-5 h-5" />
-                                    View Showreel
-                                </motion.button>
-                            </Link>
-                        </div>
-
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-8 mt-8 border-t border-white/10">
-                            {[
-                                { icon: <Phone className="w-5 h-5" />, label: "Call Us", value: "(917) 947-0117" },
-                                { icon: <Mail className="w-5 h-5" />, label: "Email", value: "info@upscalealliance.com" },
-                                { icon: <Clock className="w-5 h-5" />, label: "Response", value: "Within 24 hours" },
-                            ].map((contact, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.3 + idx * 0.1 }}
-                                    className="flex flex-col items-center gap-2"
-                                >
-                                    <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-white/70">
-                                        {contact.icon}
-                                    </div>
-                                    <span className="text-sm text-white/50">{contact.label}</span>
-                                    <span className="font-medium text-white">{contact.value}</span>
-                                </motion.div>
-                            ))}
-                        </div>
-                    </motion.div>
-                </div>
-            </section>
+            <CallToAction />
         </div>
     );
 };

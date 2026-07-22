@@ -241,7 +241,7 @@ const RCMContact = () => {
           <h3>Contact Information:</h3>
           <ul>
             <li>
-              <strong>Phone:</strong> (888) 555-RCM1
+              <strong>Phone:</strong> +1 (917) 947-0117
             </li>
             <li>
               <strong>Email:</strong> info@upscalealliance.com
@@ -372,10 +372,10 @@ const RCMContact = () => {
             Call us now for urgent RCM consultation
           </p>
           <a
-            href="tel:+1888555RCM1"
+            href="tel:+19179470117"
             className="inline-flex items-center gap-3 bg-white text-blue-600 font-bold text-lg px-8 py-4 rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg"
           >
-            📞 (888) 555-RCM1
+            📞  +1 (917) 947-0117
           </a>
           <p className="mt-4 text-blue-100 text-sm">
             Available Mon-Fri, 8AM-8PM EST

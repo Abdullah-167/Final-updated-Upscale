@@ -4,13 +4,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://upscalealliance.com";
 
   return [
-    // ===== Core Pages =====
+    // ===== Home =====
     {
       url: `${baseUrl}/`,
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1.0,
     },
+
+    // ===== Core Pages =====
     {
       url: `${baseUrl}/about-us`,
       lastModified: new Date(),
@@ -42,7 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
 
-    // ===== Service Pages =====
+    // ===== Services =====
     {
       url: `${baseUrl}/services/ai-automation`,
       lastModified: new Date(),
@@ -109,8 +111,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.85,
     },
+    {
+      url: `${baseUrl}/services/video-editing`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
 
-    // ===== Legal Pages =====
+    // ===== Portfolio =====
+    {
+      url: `${baseUrl}/projects`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+
+    // ===== Case Studies =====
+    {
+      url: `${baseUrl}/projects/product-development/datawizz`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects/product-development/droxy`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects/product-development/gan-ai`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects/product-development/n3xt`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects/product-development/spatial`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/projects/product-development/zaveit`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+
+    // ===== Legal =====
     {
       url: `${baseUrl}/policies/privacy-policy`,
       lastModified: new Date(),

@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Upscale Alliance | Digital Marketing & RCM Solutions Agency",
+    default: "Upscale Alliance | Digital Marketing, Web Design & AI Automation Agency",
     template:
-      "%s | Upscale Alliance | Digital Marketing & RCM Solutions Agency",
+      "%s | Upscale Alliance | Digital Marketing, Web Design & AI Automation Agency",
   },
 
   description:
-    "Upscale Alliance is a premier digital marketing and RCM agency specializing in SEO, Generative Engine Optimization (GEO), PPC advertising, website development, and Revenue Cycle Management (RCM) services. We help businesses grow online while optimizing medical billing and revenue operations for healthcare practices.",
+    "Upscale Alliance is a digital marketing and RCM agency specializing in Ai Automation, SEO, Generative Engine Optimization (GEO), PPC advertising, website development, video editing, and Revenue Cycle Management (RCM) services. We help businesses grow online while optimizing medical billing and revenue operations for healthcare practices.",
 
   keywords: [
     "digital marketing agency",

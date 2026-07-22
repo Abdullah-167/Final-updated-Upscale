@@ -170,8 +170,16 @@ const Footer = () => {
               </Link>
             </li>
             <li>
+              <Link
+                href="/services/website-development"
+                className="hover:text-blue-600"
+              >
+                Website Development
+              </Link>
+            </li>
+            <li>
               <Link href="/services/ai-automation" className="hover:text-blue-600">
-               AI Automation
+                AI Automation
               </Link>
             </li>
             <li>
@@ -205,10 +213,10 @@ const Footer = () => {
             </li>
             <li>
               <Link
-                href="/services/website-development"
+                href="/services/video-editing"
                 className="hover:text-blue-600"
               >
-                Website Development
+                Video Editing
               </Link>
             </li>
           </ul>
