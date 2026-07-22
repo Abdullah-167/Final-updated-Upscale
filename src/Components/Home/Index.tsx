@@ -733,86 +733,86 @@ type Service = {
 };
 
 const services: Service[] = [
-  {
-    number: "01",
-    title: "AI Automation",
-    description: "Stop working IN your business and start working ON it. Our self-learning AI agents handle your repetitive tasks, qualify leads, and run operations around the clock—so you can focus on what actually moves the needle.",
-    href: "/services/ai-automation",
-    cardFrom: "#3B82F6",
-    cardTo: "#2563EB",
-    cardText: "#FFFFFF"
+  { 
+    number: "01", 
+    title: "AI Automation", 
+    description: "Deploy self-learning AI agents that run your operations 24/7 so you scale without scaling headcount.",
+    href: "/services/ai-automation", 
+    cardFrom: "#3B82F6", 
+    cardTo: "#2563EB", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "02",
-    title: "Web Design & Dev",
-    description: "Your website is your digital storefront—make it count. We build conversion-optimized sites that load in a blink, look premium, and guide visitors straight to your checkout or contact form.",
-    href: "/services/website-development",
-    cardFrom: "#0EA5E9",
-    cardTo: "#0284C7",
-    cardText: "#FFFFFF"
+  { 
+    number: "02", 
+    title: "Web Design & Dev", 
+    description: "Conversion-first engineering meets pixel-perfect design. We build sites that load fast, look sharp, and turn visitors into revenue.",
+    href: "/services/website-development", 
+    cardFrom: "#0EA5E9", 
+    cardTo: "#0284C7", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "03",
-    title: "Link Building",
-    description: "Authority isn't built overnight—but we can accelerate it. We secure editorial backlinks from real industry leaders, not spammy directories. The result? Higher domain authority, more referral traffic, and search engines that actually trust you.",
-    href: "/services/link-building",
-    cardFrom: "#8B5CF6",
-    cardTo: "#7C3AED",
-    cardText: "#FFFFFF"
+  { 
+    number: "03", 
+    title: "Link Building", 
+    description: "Secure high-impact backlinks from industry leaders—not directories. Real authority that search engines actually trust.",
+    href: "/services/link-building", 
+    cardFrom: "#8B5CF6", 
+    cardTo: "#7C3AED", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "04",
-    title: "Content Writing",
-    description: "Words have power—if they're written strategically. Our content doesn't just fill space; it builds authority, answers real questions, and gently guides readers toward becoming customers. Every piece is crafted with intention.",
-    href: "/services/content-writing",
-    cardFrom: "#F59E0B",
-    cardTo: "#D97706",
-    cardText: "#FFFFFF"
+  { 
+    number: "04", 
+    title: "Content Writing", 
+    description: "Words that persuade, rank, and convert. Every piece is strategically crafted to build authority and drive action.",
+    href: "/services/content-writing", 
+    cardFrom: "#F59E0B", 
+    cardTo: "#D97706", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "05",
-    title: "Social Media Marketing",
-    description: "Stop posting randomly and start building a movement. We create scroll-stopping content, engage your community, and turn casual followers into loyal customers. Your brand deserves more than just likes—it deserves a following that buys.",
-    href: "/services/paid-advertising",
-    cardFrom: "#EC4899",
-    cardTo: "#DB2777",
-    cardText: "#FFFFFF"
+  { 
+    number: "05", 
+    title: "Social Media Marketing", 
+    description: "Turn your brand into a movement with scroll-stopping content and culture-driven strategy that actually builds a following.",
+    href: "/services/paid-advertising", 
+    cardFrom: "#EC4899", 
+    cardTo: "#DB2777", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "06",
-    title: "Video Editing",
-    description: "Raw footage is just potential. We turn it into polished, engaging videos that tell your story, capture attention, and drive action. Whether it's social clips, commercials, or explainer videos—we make your brand look like the premium choice.",
-    href: "/services/video-editing",
-    cardFrom: "#EF4444",
-    cardTo: "#DC2626",
-    cardText: "#FFFFFF"
+  { 
+    number: "06", 
+    title: "SEO", 
+    description: "Rank higher and get found by the people who matter. We drive qualified traffic, not just noise.",
+    href: "/services/seo", 
+    cardFrom: "#10B981", 
+    cardTo: "#059669", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "07",
-    title: "SEO",
-    description: "Being invisible online is expensive. We optimize your site to rank for the keywords that actually bring in qualified leads—not vanity metrics. More traffic. More conversions. More revenue.",
-    href: "/services/seo",
-    cardFrom: "#10B981",
-    cardTo: "#059669",
-    cardText: "#FFFFFF"
+  { 
+    number: "07", 
+    title: "Video Editing", 
+    description: "Turn raw footage into polished, engaging stories that capture attention and drive action.",
+    href: "/services/video-editing", 
+    cardFrom: "#EF4444", 
+    cardTo: "#DC2626", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "08",
-    title: "GEO",
-    description: "AI search is the future—and it's happening now. We optimize your brand so ChatGPT, Gemini, Claude, and other AI assistants recommend YOU when users ask questions. Don't get left behind while your competitors become the answer.",
-    href: "/services/generative-engine-optimization",
-    cardFrom: "#06B6D4",
-    cardTo: "#0891B2",
-    cardText: "#FFFFFF"
+  { 
+    number: "08", 
+    title: "GEO", 
+    description: "Make your brand the answer when AI assistants like ChatGPT and Gemini get asked questions.",
+    href: "/services/generative-engine-optimization", 
+    cardFrom: "#06B6D4", 
+    cardTo: "#0891B2", 
+    cardText: "#FFFFFF" 
   },
-  {
-    number: "09",
-    title: "Revenue Cycle Management",
-    description: "Cash flow keeps your business alive. We streamline your entire revenue loop—from lead capture to payment collection—so money flows smoothly and you stop chasing invoices. Less friction. More profit.",
-    href: "/services/revenue-cycle-management",
-    cardFrom: "#F97316",
-    cardTo: "#EA580C",
-    cardText: "#FFFFFF"
+  { 
+    number: "09", 
+    title: "Revenue Cycle Management", 
+    description: "Tighten your revenue loop from lead capture to payment collection. Less friction, more cash flow.",
+    href: "/services/revenue-cycle-management", 
+    cardFrom: "#F97316", 
+    cardTo: "#EA580C", 
+    cardText: "#FFFFFF" 
   },
 ];
 
