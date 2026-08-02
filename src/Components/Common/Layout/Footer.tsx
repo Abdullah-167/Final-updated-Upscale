@@ -109,17 +109,6 @@ const Footer = () => {
                 Cheyenne, WY 82007
               </p>
             </div>
-
-            <div>
-              <p className="font-medium text-gray-900">Secondary Office</p>
-              <p>
-                Kohinoor City Plaza #1
-                <br />
-                FSD, Punjab 38090
-                <br />
-                PK
-              </p>
-            </div>
           </div>
 
           <div className="text-sm text-gray-600 space-y-2">
