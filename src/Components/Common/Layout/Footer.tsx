@@ -100,7 +100,6 @@ const Footer = () => {
 
           <div className="text-sm text-gray-600 space-y-4">
             <div>
-              <p className="font-medium text-gray-900">United States (HQ)</p>
               <p>
                 1501 South Greeley Hwy
                 <br />
